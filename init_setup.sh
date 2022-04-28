@@ -5,6 +5,9 @@ echo [$(date)]: "activate environment"
 source activate ./env
 echo [$(date)]: "install requirements"
 pip install -r requirements.txt
-echo [$(date)]: "install PyTorch"
-conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch -y
+#echo [$(date)]: "install PyTorch"
+# CUDA GPU setup
+#conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch -y
+# for CPU
+# conda install pytorch torchvision torchaudio cpuonly -c pytorch
 echo [$(date)]: "END"
